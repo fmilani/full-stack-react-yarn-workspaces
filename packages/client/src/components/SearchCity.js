@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Input from 'shared/Input';
 import Autocomplete from 'react-autocomplete';
 import latinize from 'latinize';
 
@@ -32,6 +33,10 @@ class SearchCity extends Component {
         inputProps={{
           placeholder: 'Para onde?',
           style: { textAlign: 'center' },
+        }}
+        renderInput={props => {
+          const { ref, ...rest } = props;
+          return <Input {...rest} innerRef={ref} />;
         }}
         menuStyle={{
           boxShadow: '0 2px 12px rgba(0, 0, 0, 0.1)',

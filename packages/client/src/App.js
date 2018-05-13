@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import Button from 'shared/Button';
 import Result from './components/Result';
 import SearchCity from './components/SearchCity';
 import latinize from 'latinize';
@@ -66,7 +66,7 @@ class App extends Component {
             Se quiser já pedir o guincho, ou até mesmo tirar dúvidas, é só ligar
           </p>
           <a href="tel:555-555-5555">
-            <button>Ligar</button>
+            <Button>Ligar</Button>
           </a>
         </div>
       </div>
