@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Button from 'shared/Button';
+import Header from 'shared/Header';
 import Result from './components/Result';
 import SearchCity from './components/SearchCity';
 import latinize from 'latinize';
@@ -32,16 +33,7 @@ class App extends Component {
   render() {
     return (
       <div style={{ textAlign: 'center' }}>
-        <header
-          style={{
-            backgroundColor: 'black',
-            padding: 20,
-            marginBottom: 20,
-            color: 'white',
-          }}
-        >
-          <span style={{ fontSize: '1.8rem' }}>Consultar preço</span>
-        </header>
+        <Header title="Consultar Preço" />
         <SearchCity onSelectCity={this.checkCityPrice} />
         {this.state.loading ? (
           'Consultando preço...'
